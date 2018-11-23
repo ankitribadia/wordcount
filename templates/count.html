@@ -1,0 +1,15 @@
+<h1>Count</h1>
+<a href="{% url 'home' %}">Home</a>
+<br/>
+<h3>There are {{counter}} words in your text</h3>
+<p>Your Text:</p>
+{{input_text}}
+<br/>
+<br/>
+<br/>
+<h3>Word Count</h3>
+
+{% for word, counted in word_dict %}
+{{word}} : {{counted}}
+<br/>
+{% endfor %}
